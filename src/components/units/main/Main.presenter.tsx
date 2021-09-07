@@ -1,27 +1,74 @@
+import React from "react";
+import { Helmet } from "react-helmet";
 import {
   Name,
   Wrapper,
   WrapperColumn,
   WrapperRow,
   WrapperTopSection,
+  Portrait,
 } from "./Main.styles";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const MainUI = () => {
   return (
     <Wrapper>
+      <Helmet>
+        <title>Sung Woo Min's Website</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="Sung Woo Min's Website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="og:image" content="/me.png" />
+      </Helmet>
       <WrapperTopSection>
         <WrapperRow>
           <WrapperColumn>
-            <div>Frontend Developer</div>
-            <Name>Sung Woo (Steve Min)</Name>
+            <div style={{ color: "#91959b", fontSize: "36px" }}>
+              Frontend Developer
+            </div>
+            <Name>Sung Woo Min</Name>
           </WrapperColumn>
+          {/* <WrapperColumn><Portrait src="/me.png" /></WrapperColumn> */}
           <WrapperColumn>
-            <div style={{ width: "15%" }}>
-              I'm a NYC based Software Engineer & Frontend Developer. I am
+            <div style={{ width: "300px", maxWidth: "100%" }}>
+              Hi, I'm a NYC based Software Engineer & Frontend Developer. I am
               pursuing my Bachelors in Information Science in Cornell
               University, College of Arts and Sciences.
             </div>
           </WrapperColumn>
+        </WrapperRow>
+        <WrapperRow>
+          <LinkedInIcon />
+          <GitHubIcon />
+        </WrapperRow>
+      </WrapperTopSection>
+      <WrapperTopSection style={{ backgroundColor: "#F9F9F9F9" }}>
+        <WrapperRow style={{ justifyContent: "space-around" }}>
+          <WrapperColumn>
+            <div style={{ color: "#black", fontSize: "36px" }}>About Me</div>
+            <div style={{ color: "#36363636", fontSize: "36px" }}>About Me</div>
+            <div style={{ color: "#36363636", fontSize: "36px" }}>About Me</div>
+            <div style={{ fontSize: "36px" }}>About Me</div>
+          </WrapperColumn>
+          <WrapperColumn>
+            <div style={{ color: "#36363636", fontSize: "48px" }}>About Me</div>
+            <div style={{ width: "600px", maxWidth: "100%", fontSize: "16px" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              pellentesque dapibus elit, ut pretium tortor. Sed dolor eros,
+              dictum at ex ut, sodales vestibulum lectus. Nullam varius metus
+              vitae justo eleifend, at feugiat lectus euismod. Donec lacus
+              neque, molestie nec mi in, dapibus facilisis tellus. Proin
+              tincidunt mattis nibh, eu viverra turpis tincidunt at. Vivamus
+              egestas, velit sed semper hendrerit, est eros tincidunt mi,
+              placerat condimentum tortor urna ac lorem. Ut blandit, ligula
+              vitae posuere gravida, lectus odio vehicula sapien, nec pulvinar
+              purus sapien nec nunc. Nam pharetra venenatis eleifend. Aliquam
+              eget accumsan massa. Cras eu mi commodo, vestibulum lectus sed,
+              venenatis sapien.
+            </div>
+          </WrapperColumn>
+          <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
         </WrapperRow>
       </WrapperTopSection>
     </Wrapper>
