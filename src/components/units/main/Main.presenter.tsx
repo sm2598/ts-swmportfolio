@@ -7,11 +7,66 @@ import {
   WrapperRow,
   WrapperTopSection,
   Portrait,
+  SkillCard,
+  SkillCardImg,
 } from "./Main.styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 const MainUI = () => {
+  const languages = [
+    {
+      path: "/javascript.png",
+      name: "Javascript",
+    },
+    {
+      path: "/ts.png",
+      name: "Typescript",
+    },
+    {
+      path: "/python.png",
+      name: "Python",
+    },
+    {
+      path: "/java.png",
+      name: "Java",
+    },
+    {
+      path: "/php.png",
+      name: "php",
+    },
+  ];
+  const frameworks = [
+    {
+      path: "/react.png",
+      name: "React",
+    },
+    {
+      path: "/redux.png",
+      name: "Redux",
+    },
+    {
+      path: "/jquery.png",
+      name: "jquery",
+    },
+  ];
+  const design = [
+    {
+      path: "/figma.png",
+      name: "figma",
+    },
+  ];
+  const tools = [
+    {
+      path: "/nodejs.png",
+      name: "Nodejs",
+    },
+    {
+      path: "/vscode.png",
+      name: "Vscode",
+    },
+  ];
+
   return (
     <Wrapper>
       <Helmet>
@@ -70,6 +125,45 @@ const MainUI = () => {
           </WrapperColumn>
           <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
         </WrapperRow>
+      </WrapperTopSection>
+      <WrapperTopSection style={{}}>
+        <WrapperColumn>
+          <div style={{ fontSize: "48px" }}>Skills</div>
+          <WrapperColumn>
+            <div style={{ fontSize: "36px" }}>Languages</div>
+            <WrapperRow>
+              {languages.map((data) => (
+                <SkillCard>
+                  <SkillCardImg src={data.path} />
+                </SkillCard>
+              ))}
+            </WrapperRow>
+            <div style={{ fontSize: "36px" }}>Frameworks</div>
+            <WrapperRow>
+              {frameworks.map((data) => (
+                <SkillCard>
+                  <SkillCardImg src={data.path} />
+                </SkillCard>
+              ))}
+            </WrapperRow>
+            <div style={{ fontSize: "36px" }}>Design</div>
+            <WrapperRow>
+              {design.map((data) => (
+                <SkillCard>
+                  <SkillCardImg src={data.path} />
+                </SkillCard>
+              ))}
+            </WrapperRow>
+            <div style={{ fontSize: "36px" }}>Tools</div>
+            <WrapperRow>
+              {tools.map((data) => (
+                <SkillCard>
+                  <SkillCardImg src={data.path} />
+                </SkillCard>
+              ))}
+            </WrapperRow>
+          </WrapperColumn>
+        </WrapperColumn>
       </WrapperTopSection>
     </Wrapper>
   );
