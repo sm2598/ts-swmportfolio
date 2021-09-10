@@ -37,7 +37,7 @@ export const Portrait = styled.img`
   z-index: 1;
 `;
 export const SkillCard = styled.div`
-  max-width: 150px;
+  max-width: 100px;
   margin: 10px;
   border: 1px solid #f0f0f0;
 `
