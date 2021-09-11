@@ -28,6 +28,12 @@ export const WrapperRow = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 `
+export const WrapperRowSkills = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-top: 1px solid #3c4649;
+`
 export const Name = styled.div`
   font-size: 48px;
 `
@@ -36,12 +42,27 @@ export const Portrait = styled.img`
   position: relative;
   z-index: 1;
 `;
+export const SkillsHeader = styled.div`
+  font-size: 48px;
+  color: #3c4649;
+`
 export const SkillCard = styled.div`
   max-width: 100px;
+  max-height: 100px;
   margin: 10px;
   border: 1px solid #f0f0f0;
 `
 export const SkillCardImg = styled.img`
   width: 100%;
   padding: 20px;
+`
+export const SkillsName = styled.div`
+  font-size: 36px;
+  color: #3c4649;
+`
+export const IconContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `

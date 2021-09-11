@@ -9,6 +9,10 @@ import {
   Portrait,
   SkillCard,
   SkillCardImg,
+  SkillsName,
+  WrapperRowSkills,
+  SkillsHeader,
+  IconContainer,
 } from "./Main.styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -79,10 +83,12 @@ const MainUI = () => {
       <WrapperTopSection>
         <WrapperRow>
           <WrapperColumn>
-            <div style={{ color: "#91959b", fontSize: "36px" }}>
-              Frontend Developer
+            <div style={{ color: "#91959b", fontSize: "24px" }}>
+              Entrepreneur, Frontend Developer, Student
             </div>
-            <Name>Sung Woo Min</Name>
+            <Name>
+              Hi, <b>I'm Sung Woo Min</b>
+            </Name>
           </WrapperColumn>
           {/* <WrapperColumn><Portrait src="/me.png" /></WrapperColumn> */}
           <WrapperColumn>
@@ -94,8 +100,21 @@ const MainUI = () => {
           </WrapperColumn>
         </WrapperRow>
         <WrapperRow>
-          <LinkedInIcon />
-          <GitHubIcon />
+          <IconContainer>
+            <LinkedInIcon
+              onClick={(event) =>
+                (window.location.href =
+                  "https://www.linkedin.com/in/sungwoomin/")
+              }
+            />
+          </IconContainer>
+          <IconContainer>
+            <GitHubIcon
+              onClick={(event) =>
+                (window.location.href = "https://github.com/sm2598")
+              }
+            />
+          </IconContainer>
         </WrapperRow>
       </WrapperTopSection>
       <WrapperTopSection style={{ backgroundColor: "#F9F9F9F9" }}>
@@ -107,8 +126,15 @@ const MainUI = () => {
             <div style={{ fontSize: "36px" }}>About Me</div>
           </WrapperColumn>
           <WrapperColumn>
-            <div style={{ color: "#36363636", fontSize: "48px" }}>About Me</div>
-            <div style={{ width: "600px", maxWidth: "100%", fontSize: "16px" }}>
+            <div style={{ color: "#3c4649", fontSize: "48px" }}>About Me</div>
+            <div
+              style={{
+                color: "#3c4649",
+                width: "600px",
+                maxWidth: "100%",
+                fontSize: "16px",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
               pellentesque dapibus elit, ut pretium tortor. Sed dolor eros,
               dictum at ex ut, sodales vestibulum lectus. Nullam varius metus
@@ -128,41 +154,46 @@ const MainUI = () => {
       </WrapperTopSection>
       <WrapperTopSection style={{}}>
         <WrapperColumn>
-          <div style={{ fontSize: "48px" }}>Skills</div>
+          <SkillsHeader>Skills</SkillsHeader>
           <WrapperColumn>
-            <div style={{ fontSize: "36px" }}>Languages</div>
-            <WrapperRow>
+            <SkillsName>Languages</SkillsName>
+            <WrapperRowSkills>
               {languages.map((data) => (
                 <SkillCard>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
-            </WrapperRow>
-            <div style={{ fontSize: "36px" }}>Frameworks</div>
-            <WrapperRow>
+            </WrapperRowSkills>
+            <SkillsName>Frameworks</SkillsName>
+            <WrapperRowSkills>
               {frameworks.map((data) => (
                 <SkillCard>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
-            </WrapperRow>
-            <div style={{ fontSize: "36px" }}>Design</div>
-            <WrapperRow>
+            </WrapperRowSkills>
+            <SkillsName>Design</SkillsName>
+            <WrapperRowSkills>
               {design.map((data) => (
                 <SkillCard>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
-            </WrapperRow>
-            <div style={{ fontSize: "36px" }}>Tools</div>
-            <WrapperRow>
+            </WrapperRowSkills>
+            <SkillsName>Tools</SkillsName>
+            <WrapperRowSkills>
               {tools.map((data) => (
                 <SkillCard>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
-            </WrapperRow>
+            </WrapperRowSkills>
           </WrapperColumn>
+        </WrapperColumn>
+      </WrapperTopSection>
+      <WrapperTopSection style={{ backgroundColor: "#F9F9F9F9" }}>
+        <WrapperColumn>
+          <div style={{ fontSize: "48px" }}>Projects</div>
         </WrapperColumn>
       </WrapperTopSection>
     </Wrapper>
