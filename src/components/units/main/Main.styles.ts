@@ -36,11 +36,57 @@ export const WrapperRowSkills = styled.div`
 `
 export const Name = styled.div`
   font-size: 48px;
+  position: relative;
 `
+export const HighlightText = styled.div`
+  font-size: 48px;
+  z-index: 1;
+  position: relative;
+`
+export const Highlight = styled.img`
+  z-index: -1;
+  display: absolute;
+  width: 300px;
+  height: 50px;
+`
+export const AboutMe = styled.div`
+color: #91959b;
+font-size: 24px;
+
+  animation-duration: 5s;
+  animation-name: slide;
+
+
+  @keyframes slide {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(00px);
+      opacity: 1;
+    }
+  }
+`
+
 export const Portrait = styled.img`
   width: 300px;
   position: relative;
   z-index: 1;
+  animation-duration: 3s;
+  animation-name: show;
+
+
+  @keyframes show {
+    from {
+      transform: translateX(00px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(00px);
+      opacity: 1;
+    }
+  }
 `;
 export const SkillsHeader = styled.div`
   font-size: 48px;
@@ -65,4 +111,9 @@ export const IconContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 50%;
+  }
 `

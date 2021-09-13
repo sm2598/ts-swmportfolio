@@ -13,6 +13,9 @@ import {
   WrapperRowSkills,
   SkillsHeader,
   IconContainer,
+  AboutMe,
+  Highlight,
+  HighlightText,
 } from "./Main.styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -83,15 +86,13 @@ const MainUI = () => {
       <WrapperTopSection>
         <WrapperRow>
           <WrapperColumn>
-            <div style={{ color: "#91959b", fontSize: "24px" }}>
-              Entrepreneur, Frontend Developer, Student
-            </div>
+            <AboutMe>Entrepreneur, Frontend Developer, Student</AboutMe>
             <Name>
-              Hi, <b>I'm Sung Woo Min</b>
+              Hi, I'm <b>Sung Woo Min</b>
             </Name>
           </WrapperColumn>
-          {/* <WrapperColumn><Portrait src="/me.png" /></WrapperColumn> */}
-          <WrapperColumn>
+          <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
+          <WrapperColumn style={{ borderLeft: "2px solid #36363636" }}>
             <div style={{ width: "300px", maxWidth: "100%" }}>
               Hi, I'm a NYC based Software Engineer & Frontend Developer. I am
               pursuing my Bachelors in Information Science in Cornell
