@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import Navigation from "./top/Navigation.container";
+import Footer from "./footer/Footer.container";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -18,7 +19,7 @@ const Layout = ({ children }) => {
       <Wrapper>
         {isNavigation && <Navigation />}
         <Body>{children}</Body>
-        {/* {isNavigation && <Footer />} */}
+        {isNavigation && <Footer />}
       </Wrapper>
     </>
   );

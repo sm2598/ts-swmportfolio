@@ -19,6 +19,10 @@ import {
   Resume,
   AnimationName,
   AboutMeText,
+  ProjectCards,
+  ProjectCardsAbout,
+  ProjectCardsImg,
+  ProjectCardsDesc,
 } from "./Main.styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -90,9 +94,13 @@ const MainUI = () => {
         <WrapperRow>
           <WrapperColumn>
             <AboutMe>Entrepreneur, Frontend Developer, Student</AboutMe>
-            <Name>
-              Hi, I'm <b>Sung Woo (Steve) Min</b>
-            </Name>
+            <WrapperRow>
+              <Name>
+                Hi, I'm <b>Sung Woo (Steve) Min</b>
+              </Name>
+              <Highlight src="/highlight.svg" />
+              {/* <Highlighter src="/highlighter.png" /> */}
+            </WrapperRow>
           </WrapperColumn>
           <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
           <WrapperColumn style={{ borderLeft: "2px solid #36363636" }}>
@@ -155,7 +163,7 @@ const MainUI = () => {
         </WrapperRow>
       </WrapperTopSection>
       <WrapperTopSection style={{}}>
-        <WrapperColumn style={{ marginTop: "20px;" }}>
+        <WrapperColumn style={{ marginTop: "20px" }}>
           <SkillsHeader>Skills</SkillsHeader>
           <WrapperColumn>
             <SkillsName>Languages</SkillsName>
@@ -194,8 +202,101 @@ const MainUI = () => {
         </WrapperColumn>
       </WrapperTopSection>
       <WrapperTopSection style={{ backgroundColor: "#F9F9F9F9" }}>
-        <WrapperColumn>
+        <WrapperColumn style={{ width: "90%" }}>
           <div style={{ fontSize: "48px" }}>Projects</div>
+          <WrapperRow style={{ justifyContent: "center" }}>
+            <WrapperColumn style={{ padding: "0px" }}>
+              <ProjectCards>
+                <ProjectCardsAbout>
+                  <b>BananaMarket</b>
+                </ProjectCardsAbout>
+                <ProjectCardsImg
+                  src="/trading.png"
+                  onClick={(event) =>
+                    (window.location.href = "https://example1-code.web.app/")
+                  }
+                />
+                <ProjectCardsDesc>P2P Trading Platform</ProjectCardsDesc>
+              </ProjectCards>
+              <IconContainer>
+                <GitHubIcon
+                  style={{ fontSize: "24px", margin: "12px" }}
+                  onClick={(event) =>
+                    (window.location.href = "https://github.com/sm2598")
+                  }
+                />
+              </IconContainer>
+            </WrapperColumn>
+            <WrapperColumn style={{ padding: "0px" }}>
+              <ProjectCards>
+                <ProjectCardsAbout>
+                  <b>NoHonBab</b>
+                </ProjectCardsAbout>
+                <ProjectCardsImg src="/nohonbab.png" />
+                <ProjectCardsDesc>
+                  Matching Platform for People to Eat Together
+                </ProjectCardsDesc>
+              </ProjectCards>
+              <IconContainer>
+                <GitHubIcon
+                  style={{ fontSize: "24px", margin: "12px" }}
+                  onClick={(event) =>
+                    (window.location.href = "https://github.com/sm2598")
+                  }
+                />
+              </IconContainer>
+            </WrapperColumn>
+            <WrapperColumn style={{ padding: "0px" }}>
+              <ProjectCards>
+                <ProjectCardsAbout>
+                  <b>AllSwap</b>
+                </ProjectCardsAbout>
+                <ProjectCardsImg src="/allswap.png" />
+                <ProjectCardsDesc>
+                  Textbook exchange within Cornell University.
+                </ProjectCardsDesc>
+              </ProjectCards>
+              <IconContainer>
+                <GitHubIcon
+                  style={{ fontSize: "24px", margin: "12px" }}
+                  onClick={(event) =>
+                    (window.location.href = "https://github.com/sm2598")
+                  }
+                />
+              </IconContainer>
+            </WrapperColumn>
+            <WrapperColumn style={{ padding: "0px" }}>
+              <ProjectCards>
+                <ProjectCardsAbout>
+                  <b>Cornell KSA</b>
+                </ProjectCardsAbout>
+                <ProjectCardsImg
+                  src="/ksa.png"
+                  onClick={(event) =>
+                    (window.location.href = "https://cornellksa.com/")
+                  }
+                />
+                <ProjectCardsDesc>
+                  Cornell Korean Students Association organization website.
+                </ProjectCardsDesc>
+              </ProjectCards>
+              <IconContainer>
+                <GitHubIcon
+                  style={{ fontSize: "24px", margin: "12px" }}
+                  onClick={(event) =>
+                    (window.location.href = "https://github.com/sm2598")
+                  }
+                />
+              </IconContainer>
+            </WrapperColumn>
+          </WrapperRow>
+        </WrapperColumn>
+      </WrapperTopSection>
+      <WrapperTopSection>
+        <WrapperColumn>
+          <div style={{ fontSize: "48px" }}>Contact Me</div>
+          <div>Phone Number: 551-486-9976</div>
+          <div>Email: sm2598@cornell.edu</div>
         </WrapperColumn>
       </WrapperTopSection>
     </Wrapper>

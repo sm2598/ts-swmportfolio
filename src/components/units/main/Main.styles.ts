@@ -41,6 +41,7 @@ export const WrapperRowSkills = styled.div`
   border-top: 1px solid #3c4649;
 `
 export const Name = styled.div`
+  position: relative;
   font-size: 48px;
   display: inline-block;
   overflow: hidden;
@@ -50,24 +51,25 @@ export const Name = styled.div`
   font-weight: 700;
   border-right: 4px solid orange;
   box-sizing: border-box;
+  z-index: 2;
 
   @keyframes typing {
-  from { 
-      width: 0% 
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
   }
-  to { 
-      width: 100% 
-  }
-}
 
-@keyframes blink {
-    from, to { 
-        border-color: transparent 
-    }
-    50% { 
-        border-color: orange; 
-    }
-}
+  @keyframes blink {
+      from, to { 
+          border-color: transparent 
+      }
+      50% { 
+          border-color: orange; 
+      }
+  }
 `
 export const AnimationName = styled.div`
   font-size: 48px;
@@ -78,11 +80,32 @@ export const HighlightText = styled.div`
   position: relative;
 `
 export const Highlight = styled.img`
-  z-index: -1;
+  z-index: 1;
   display: absolute;
-  width: 300px;
   height: 50px;
+  width: 500px;
+  opacity: 70%;
+  margin-left: -515px;
+  margin-top: 18px;
+  object-fit: cover;
+
+  animation-name: left;
+  animation-duration: 6s;
+  animation-timing-function:ease-in;
+
+
+  @keyframes left {
+    from {
+      opacity: 0%;
+      width: 0px;
+    }
+    to {
+      opacity: 70%;
+      width: 500px;
+    }
+  }
 `
+
 export const AboutMe = styled.div`
 color: #91959b;
 font-size: 24px;
@@ -93,11 +116,11 @@ font-size: 24px;
 
   @keyframes slide {
     from {
-      transform: translateX(-50px);
+      transform: translateY(-50px);
       opacity: 0;
     }
     to {
-      transform: translateX(00px);
+      transform: translateY(00px);
       opacity: 1;
     }
   }
@@ -151,7 +174,7 @@ export const SkillsHeader = styled.div`
 export const SkillCard = styled.div`
   max-width: 100px;
   max-height: 100px;
-  margin: 10px;
+  margin: 20px;
   border: 1px solid #f0f0f0;
 `
 export const SkillCardImg = styled.img`
@@ -172,4 +195,49 @@ export const IconContainer = styled.div`
   &:hover {
     opacity: 50%;
   }
+`
+export const ProjectCards = styled.div`
+  margin: 16px;
+  max-width: 250px;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border: 0.5px solid orange;
+
+  &:hover {
+    filter: contrast(100%);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    transform: scale(1.05, 1.05);
+  }
+`
+export const ProjectCardsAbout = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  background: #F9F9F9F9;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+`
+export const ProjectCardsImg = styled.img`
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  object-fit: cover;
+  opacity: 70%;
+  cursor: pointer;
+`
+export const ProjectCardsDesc = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  background: #F9F9F9F9;
+  padding: 12px;
 `
