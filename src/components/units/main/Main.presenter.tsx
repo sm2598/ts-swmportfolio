@@ -16,6 +16,9 @@ import {
   AboutMe,
   Highlight,
   HighlightText,
+  Resume,
+  AnimationName,
+  AboutMeText,
 } from "./Main.styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -88,13 +91,13 @@ const MainUI = () => {
           <WrapperColumn>
             <AboutMe>Entrepreneur, Frontend Developer, Student</AboutMe>
             <Name>
-              Hi, I'm <b>Sung Woo Min</b>
+              Hi, I'm <b>Sung Woo (Steve) Min</b>
             </Name>
           </WrapperColumn>
           <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
           <WrapperColumn style={{ borderLeft: "2px solid #36363636" }}>
             <div style={{ width: "300px", maxWidth: "100%" }}>
-              Hi, I'm a NYC based Software Engineer & Frontend Developer. I am
+              I'm a NYC/Seoul based Software Engineer & Frontend Developer. I am
               pursuing my Bachelors in Information Science in Cornell
               University, College of Arts and Sciences.
             </div>
@@ -103,6 +106,7 @@ const MainUI = () => {
         <WrapperRow>
           <IconContainer>
             <LinkedInIcon
+              style={{ fontSize: "48px", margin: "12px" }}
               onClick={(event) =>
                 (window.location.href =
                   "https://www.linkedin.com/in/sungwoomin/")
@@ -111,6 +115,7 @@ const MainUI = () => {
           </IconContainer>
           <IconContainer>
             <GitHubIcon
+              style={{ fontSize: "48px", margin: "12px" }}
               onClick={(event) =>
                 (window.location.href = "https://github.com/sm2598")
               }
@@ -120,22 +125,15 @@ const MainUI = () => {
       </WrapperTopSection>
       <WrapperTopSection style={{ backgroundColor: "#F9F9F9F9" }}>
         <WrapperRow style={{ justifyContent: "space-around" }}>
-          <WrapperColumn>
+          {/* <WrapperColumn>
             <div style={{ color: "#black", fontSize: "36px" }}>About Me</div>
             <div style={{ color: "#36363636", fontSize: "36px" }}>About Me</div>
             <div style={{ color: "#36363636", fontSize: "36px" }}>About Me</div>
             <div style={{ fontSize: "36px" }}>About Me</div>
-          </WrapperColumn>
+          </WrapperColumn> */}
           <WrapperColumn>
             <div style={{ color: "#3c4649", fontSize: "48px" }}>About Me</div>
-            <div
-              style={{
-                color: "#3c4649",
-                width: "600px",
-                maxWidth: "100%",
-                fontSize: "16px",
-              }}
-            >
+            <AboutMeText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
               pellentesque dapibus elit, ut pretium tortor. Sed dolor eros,
               dictum at ex ut, sodales vestibulum lectus. Nullam varius metus
@@ -148,19 +146,22 @@ const MainUI = () => {
               purus sapien nec nunc. Nam pharetra venenatis eleifend. Aliquam
               eget accumsan massa. Cras eu mi commodo, vestibulum lectus sed,
               venenatis sapien.
-            </div>
+            </AboutMeText>
+            <WrapperColumn style={{ alignItems: "center" }}>
+              <Resume>Download Resume</Resume>
+            </WrapperColumn>
           </WrapperColumn>
           <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
         </WrapperRow>
       </WrapperTopSection>
       <WrapperTopSection style={{}}>
-        <WrapperColumn>
+        <WrapperColumn style={{ marginTop: "20px;" }}>
           <SkillsHeader>Skills</SkillsHeader>
           <WrapperColumn>
             <SkillsName>Languages</SkillsName>
             <WrapperRowSkills>
               {languages.map((data) => (
-                <SkillCard>
+                <SkillCard key={1}>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
@@ -168,7 +169,7 @@ const MainUI = () => {
             <SkillsName>Frameworks</SkillsName>
             <WrapperRowSkills>
               {frameworks.map((data) => (
-                <SkillCard>
+                <SkillCard key={2}>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
@@ -176,7 +177,7 @@ const MainUI = () => {
             <SkillsName>Design</SkillsName>
             <WrapperRowSkills>
               {design.map((data) => (
-                <SkillCard>
+                <SkillCard key={3}>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}
@@ -184,7 +185,7 @@ const MainUI = () => {
             <SkillsName>Tools</SkillsName>
             <WrapperRowSkills>
               {tools.map((data) => (
-                <SkillCard>
+                <SkillCard key={4}>
                   <SkillCardImg src={data.path} />
                 </SkillCard>
               ))}

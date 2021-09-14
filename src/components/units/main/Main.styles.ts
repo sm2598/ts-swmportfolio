@@ -7,14 +7,20 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+export const AboutMeText = styled.div`
+  color: "#3c4649";
+  max-width: 800px;
+  width: 100%;
+  font-size: 16px;
+`
 export const WrapperTopSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 1920px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1920px;
   /* background-color: #ebe7e0; */
 `;
 export const WrapperColumn = styled.div`
@@ -36,7 +42,35 @@ export const WrapperRowSkills = styled.div`
 `
 export const Name = styled.div`
   font-size: 48px;
-  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 3s steps(30, end), blink .9s step-end infinite;
+  white-space: nowrap;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+
+  @keyframes typing {
+  from { 
+      width: 0% 
+  }
+  to { 
+      width: 100% 
+  }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: orange; 
+    }
+}
+`
+export const AnimationName = styled.div`
+  font-size: 48px;
 `
 export const HighlightText = styled.div`
   font-size: 48px;
@@ -88,9 +122,31 @@ export const Portrait = styled.img`
     }
   }
 `;
+export const Resume = styled.button`
+  max-width: 100%;
+  width: 220px;
+  height: 50px;
+
+  background: #3c4649;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  
+  cursor: pointer;
+
+  transition-duration: 0.3s;
+
+  &:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    transform: scale(1.2, 1.2);
+    opacity: 50%;
+  }
+`
 export const SkillsHeader = styled.div`
   font-size: 48px;
   color: #3c4649;
+  margin-top: 20px;
 `
 export const SkillCard = styled.div`
   max-width: 100px;
