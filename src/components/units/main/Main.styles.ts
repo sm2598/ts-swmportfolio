@@ -49,7 +49,7 @@ export const Name = styled.div`
   animation: typing 3s steps(30, end), blink .9s step-end infinite;
   white-space: nowrap;
   font-weight: 700;
-  border-right: 4px solid orange;
+  border-right: 4px solid black;
   box-sizing: border-box;
   z-index: 2;
 
@@ -109,6 +109,8 @@ export const Highlight = styled.img`
 export const AboutMe = styled.div`
 color: #91959b;
 font-size: 24px;
+max-width: 1920px;
+width: 100%;
 
   animation-duration: 5s;
   animation-name: slide;
@@ -208,7 +210,7 @@ export const ProjectCards = styled.div`
   flex-direction: column;
   overflow: hidden;
   transition-duration: 0.3s;
-  border: 0.5px solid orange;
+  border: 0.5px solid black;
 
   &:hover {
     filter: contrast(100%);

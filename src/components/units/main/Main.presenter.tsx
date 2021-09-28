@@ -26,6 +26,7 @@ import {
 } from "./Main.styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Fade from "react-reveal/Fade";
 
 const MainUI = () => {
   const languages = [
@@ -105,9 +106,10 @@ const MainUI = () => {
           <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
           <WrapperColumn style={{ borderLeft: "2px solid #36363636" }}>
             <div style={{ width: "300px", maxWidth: "100%" }}>
-              I'm a NYC/Seoul based Software Engineer & Frontend Developer. I am
-              pursuing my Bachelors in Information Science in Cornell
-              University, College of Arts and Sciences.
+              I'm a NYC based Software Engineer & Frontend Developer. I am
+              pursuing my Bachelors in Information Science with a concentration
+              in Data Science in Cornell University, College of Arts and
+              Sciences.
             </div>
           </WrapperColumn>
         </WrapperRow>
@@ -156,7 +158,14 @@ const MainUI = () => {
               venenatis sapien.
             </AboutMeText>
             <WrapperColumn style={{ alignItems: "center" }}>
-              <Resume>Download Resume</Resume>
+              <Resume
+                onClick={(event) =>
+                  (window.location.href =
+                    "https://drive.google.com/file/d/1ekEGvYxUfKuwvh9hk57F18c3ndRJ80IV/view?usp=sharing")
+                }
+              >
+                Download Resume
+              </Resume>
             </WrapperColumn>
           </WrapperColumn>
           <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
@@ -166,38 +175,46 @@ const MainUI = () => {
         <WrapperColumn style={{ marginTop: "20px" }}>
           <SkillsHeader>Skills</SkillsHeader>
           <WrapperColumn>
-            <SkillsName>Languages</SkillsName>
-            <WrapperRowSkills>
-              {languages.map((data) => (
-                <SkillCard key={1}>
-                  <SkillCardImg src={data.path} />
-                </SkillCard>
-              ))}
-            </WrapperRowSkills>
-            <SkillsName>Frameworks</SkillsName>
-            <WrapperRowSkills>
-              {frameworks.map((data) => (
-                <SkillCard key={2}>
-                  <SkillCardImg src={data.path} />
-                </SkillCard>
-              ))}
-            </WrapperRowSkills>
-            <SkillsName>Design</SkillsName>
-            <WrapperRowSkills>
-              {design.map((data) => (
-                <SkillCard key={3}>
-                  <SkillCardImg src={data.path} />
-                </SkillCard>
-              ))}
-            </WrapperRowSkills>
-            <SkillsName>Tools</SkillsName>
-            <WrapperRowSkills>
-              {tools.map((data) => (
-                <SkillCard key={4}>
-                  <SkillCardImg src={data.path} />
-                </SkillCard>
-              ))}
-            </WrapperRowSkills>
+            <Fade bottom>
+              <SkillsName>Languages</SkillsName>
+              <WrapperRowSkills>
+                {languages.map((data) => (
+                  <SkillCard key={1}>
+                    <SkillCardImg src={data.path} />
+                  </SkillCard>
+                ))}
+              </WrapperRowSkills>
+            </Fade>
+            <Fade bottom>
+              <SkillsName>Frameworks</SkillsName>
+              <WrapperRowSkills>
+                {frameworks.map((data) => (
+                  <SkillCard key={2}>
+                    <SkillCardImg src={data.path} />
+                  </SkillCard>
+                ))}
+              </WrapperRowSkills>
+            </Fade>
+            <Fade bottom>
+              <SkillsName>Design</SkillsName>
+              <WrapperRowSkills>
+                {design.map((data) => (
+                  <SkillCard key={3}>
+                    <SkillCardImg src={data.path} />
+                  </SkillCard>
+                ))}
+              </WrapperRowSkills>
+            </Fade>
+            <Fade bottom>
+              <SkillsName>Tools</SkillsName>
+              <WrapperRowSkills>
+                {tools.map((data) => (
+                  <SkillCard key={4}>
+                    <SkillCardImg src={data.path} />
+                  </SkillCard>
+                ))}
+              </WrapperRowSkills>
+            </Fade>
           </WrapperColumn>
         </WrapperColumn>
       </WrapperTopSection>
@@ -205,94 +222,102 @@ const MainUI = () => {
         <WrapperColumn style={{ width: "90%" }}>
           <div style={{ fontSize: "48px" }}>Projects</div>
           <WrapperRow style={{ justifyContent: "center" }}>
-            <WrapperColumn style={{ padding: "0px" }}>
-              <ProjectCards>
-                <ProjectCardsAbout>
-                  <b>BananaMarket</b>
-                </ProjectCardsAbout>
-                <ProjectCardsImg
-                  src="/trading.png"
-                  onClick={(event) =>
-                    (window.location.href = "https://example1-code.web.app/")
-                  }
-                />
-                <ProjectCardsDesc>P2P Trading Platform</ProjectCardsDesc>
-              </ProjectCards>
-              <IconContainer>
-                <GitHubIcon
-                  style={{ fontSize: "24px", margin: "12px" }}
-                  onClick={(event) =>
-                    (window.location.href = "https://github.com/sm2598")
-                  }
-                />
-              </IconContainer>
-            </WrapperColumn>
-            <WrapperColumn style={{ padding: "0px" }}>
-              <ProjectCards>
-                <ProjectCardsAbout>
-                  <b>NoHonBab</b>
-                </ProjectCardsAbout>
-                <ProjectCardsImg src="/nohonbab.png" />
-                <ProjectCardsDesc>
-                  Matching Platform for People to Eat Together
-                </ProjectCardsDesc>
-              </ProjectCards>
-              <IconContainer>
-                <GitHubIcon
-                  style={{ fontSize: "24px", margin: "12px" }}
-                  onClick={(event) =>
-                    (window.location.href = "https://github.com/sm2598")
-                  }
-                />
-              </IconContainer>
-            </WrapperColumn>
-            <WrapperColumn style={{ padding: "0px" }}>
-              <ProjectCards>
-                <ProjectCardsAbout>
-                  <b>AllSwap</b>
-                </ProjectCardsAbout>
-                <ProjectCardsImg src="/allswap.png" />
-                <ProjectCardsDesc>
-                  Textbook exchange within Cornell University.
-                </ProjectCardsDesc>
-              </ProjectCards>
-              <IconContainer>
-                <GitHubIcon
-                  style={{ fontSize: "24px", margin: "12px" }}
-                  onClick={(event) =>
-                    (window.location.href = "https://github.com/sm2598")
-                  }
-                />
-              </IconContainer>
-            </WrapperColumn>
-            <WrapperColumn style={{ padding: "0px" }}>
-              <ProjectCards>
-                <ProjectCardsAbout>
-                  <b>Cornell KSA</b>
-                </ProjectCardsAbout>
-                <ProjectCardsImg
-                  src="/ksa.png"
-                  onClick={(event) =>
-                    (window.location.href = "https://cornellksa.com/")
-                  }
-                />
-                <ProjectCardsDesc>
-                  Cornell Korean Students Association organization website.
-                </ProjectCardsDesc>
-              </ProjectCards>
-              <IconContainer>
-                <GitHubIcon
-                  style={{ fontSize: "24px", margin: "12px" }}
-                  onClick={(event) =>
-                    (window.location.href = "https://github.com/sm2598")
-                  }
-                />
-              </IconContainer>
-            </WrapperColumn>
+            <Fade left>
+              <WrapperColumn style={{ padding: "0px" }}>
+                <ProjectCards>
+                  <ProjectCardsAbout>
+                    <b>BananaMarket</b>
+                  </ProjectCardsAbout>
+                  <ProjectCardsImg
+                    src="/trading.png"
+                    onClick={(event) =>
+                      (window.location.href = "https://example1-code.web.app/")
+                    }
+                  />
+                  <ProjectCardsDesc>P2P Trading Platform</ProjectCardsDesc>
+                </ProjectCards>
+                <IconContainer>
+                  <GitHubIcon
+                    style={{ fontSize: "24px", margin: "12px" }}
+                    onClick={(event) =>
+                      (window.location.href = "https://github.com/sm2598")
+                    }
+                  />
+                </IconContainer>
+              </WrapperColumn>
+            </Fade>
+            <Fade left>
+              <WrapperColumn style={{ padding: "0px" }}>
+                <ProjectCards>
+                  <ProjectCardsAbout>
+                    <b>NoHonBab</b>
+                  </ProjectCardsAbout>
+                  <ProjectCardsImg src="/nohonbab.png" />
+                  <ProjectCardsDesc>
+                    Matching Platform for People to Eat Together
+                  </ProjectCardsDesc>
+                </ProjectCards>
+                <IconContainer>
+                  <GitHubIcon
+                    style={{ fontSize: "24px", margin: "12px" }}
+                    onClick={(event) =>
+                      (window.location.href = "https://github.com/sm2598")
+                    }
+                  />
+                </IconContainer>
+              </WrapperColumn>
+            </Fade>
+            <Fade right>
+              <WrapperColumn style={{ padding: "0px" }}>
+                <ProjectCards>
+                  <ProjectCardsAbout>
+                    <b>AllSwap</b>
+                  </ProjectCardsAbout>
+                  <ProjectCardsImg src="/allswap.png" />
+                  <ProjectCardsDesc>
+                    Textbook exchange within Cornell University.
+                  </ProjectCardsDesc>
+                </ProjectCards>
+                <IconContainer>
+                  <GitHubIcon
+                    style={{ fontSize: "24px", margin: "12px" }}
+                    onClick={(event) =>
+                      (window.location.href = "https://github.com/sm2598")
+                    }
+                  />
+                </IconContainer>
+              </WrapperColumn>
+            </Fade>
+            <Fade right>
+              <WrapperColumn style={{ padding: "0px" }}>
+                <ProjectCards>
+                  <ProjectCardsAbout>
+                    <b>Cornell KSA</b>
+                  </ProjectCardsAbout>
+                  <ProjectCardsImg
+                    src="/ksa.png"
+                    onClick={(event) =>
+                      (window.location.href = "https://cornellksa.com/")
+                    }
+                  />
+                  <ProjectCardsDesc>
+                    Cornell Korean Students Association organization website.
+                  </ProjectCardsDesc>
+                </ProjectCards>
+                <IconContainer>
+                  <GitHubIcon
+                    style={{ fontSize: "24px", margin: "12px" }}
+                    onClick={(event) =>
+                      (window.location.href = "https://github.com/sm2598")
+                    }
+                  />
+                </IconContainer>
+              </WrapperColumn>
+            </Fade>
           </WrapperRow>
         </WrapperColumn>
       </WrapperTopSection>
-      <WrapperTopSection>
+      <WrapperTopSection style={{ minHeight: "none", height: "100%" }}>
         <WrapperColumn>
           <div style={{ fontSize: "48px" }}>Contact Me</div>
           <div>Phone Number: 551-486-9976</div>

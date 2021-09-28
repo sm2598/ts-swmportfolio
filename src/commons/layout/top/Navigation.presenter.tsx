@@ -14,15 +14,15 @@ const NavigationUI = () => {
   return (
     <WrapperRowBottom>
       <div ref={myRef} />
-      <Button onClick={executeScroll}>To The Top!</Button>
+      <Button onClick={executeScroll}>Home</Button>
       <div ref={myRef} />
-      <Button onClick={executeScroll}>About Me</Button>
+      <Button onClick={executeScroll}>About</Button>
       <div ref={myRef} />
       <Button onClick={executeScroll}>Skills</Button>
       <div ref={myRef} />
       <Button onClick={executeScroll}>Projects</Button>
       <div ref={myRef} />
-      <Button onClick={executeScroll}>Contact Me</Button>
+      <Button onClick={executeScroll}>Contact</Button>
     </WrapperRowBottom>
   );
 };
