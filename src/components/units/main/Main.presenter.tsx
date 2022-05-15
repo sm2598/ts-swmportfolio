@@ -100,10 +100,8 @@ const MainUI = () => {
                 Hi, I'm <b>Sung Woo (Steve) Min</b>
               </Name>
               <Highlight src="/highlight.svg" />
-              {/* <Highlighter src="/highlighter.png" /> */}
             </WrapperRow>
           </WrapperColumn>
-          <WrapperColumn>{/* <Portrait src="/me.png" /> */}</WrapperColumn>
           <WrapperColumn style={{ borderLeft: "2px solid #36363636" }}>
             <div style={{ width: "300px", maxWidth: "100%" }}>
               I'm a NYC based Software Engineer & Frontend Developer. I am
@@ -127,7 +125,7 @@ const MainUI = () => {
             <GitHubIcon
               style={{ fontSize: "48px", margin: "12px" }}
               onClick={(event) =>
-                (window.location.href = "https://github.com/sm2598")
+                (window.location.href = "https://github.com/sw-min")
               }
             />
           </IconContainer>
@@ -144,18 +142,15 @@ const MainUI = () => {
           <WrapperColumn>
             <div style={{ color: "#3c4649", fontSize: "48px" }}>About Me</div>
             <AboutMeText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              pellentesque dapibus elit, ut pretium tortor. Sed dolor eros,
-              dictum at ex ut, sodales vestibulum lectus. Nullam varius metus
-              vitae justo eleifend, at feugiat lectus euismod. Donec lacus
-              neque, molestie nec mi in, dapibus facilisis tellus. Proin
-              tincidunt mattis nibh, eu viverra turpis tincidunt at. Vivamus
-              egestas, velit sed semper hendrerit, est eros tincidunt mi,
-              placerat condimentum tortor urna ac lorem. Ut blandit, ligula
-              vitae posuere gravida, lectus odio vehicula sapien, nec pulvinar
-              purus sapien nec nunc. Nam pharetra venenatis eleifend. Aliquam
-              eget accumsan massa. Cras eu mi commodo, vestibulum lectus sed,
-              venenatis sapien.
+              Sung Woo Min (he/him) is a Seoul-born, developer focused on web
+              platforms. I am currently attending Cornell University in Ithaca,
+              NY with a degree in Information Sciences in the Data Science and
+              UX concentration. <br />
+              <br />
+              With the goal of creating special, niche corners of the web, I am
+              working as a member of the Cornell Design and Tech Initiative
+              project team to create new technologies. I am currently looking
+              for an internship as a frontend developer.
             </AboutMeText>
             <WrapperColumn style={{ alignItems: "center" }}>
               <Resume
@@ -240,7 +235,7 @@ const MainUI = () => {
                   <GitHubIcon
                     style={{ fontSize: "24px", margin: "12px" }}
                     onClick={(event) =>
-                      (window.location.href = "https://github.com/sm2598")
+                      (window.location.href = "https://github.com/sw-min")
                     }
                   />
                 </IconContainer>
@@ -261,7 +256,7 @@ const MainUI = () => {
                   <GitHubIcon
                     style={{ fontSize: "24px", margin: "12px" }}
                     onClick={(event) =>
-                      (window.location.href = "https://github.com/sm2598")
+                      (window.location.href = "https://github.com/sw-min")
                     }
                   />
                 </IconContainer>
@@ -282,7 +277,7 @@ const MainUI = () => {
                   <GitHubIcon
                     style={{ fontSize: "24px", margin: "12px" }}
                     onClick={(event) =>
-                      (window.location.href = "https://github.com/sm2598")
+                      (window.location.href = "https://github.com/sw-min")
                     }
                   />
                 </IconContainer>
@@ -317,10 +312,9 @@ const MainUI = () => {
           </WrapperRow>
         </WrapperColumn>
       </WrapperTopSection>
-      <WrapperTopSection style={{ minHeight: "none", height: "100%" }}>
+      <WrapperTopSection style={{ minHeight: "10vh", height: "300px" }}>
         <WrapperColumn>
           <div style={{ fontSize: "48px" }}>Contact Me</div>
-          <div>Phone Number: 551-486-9976</div>
           <div>Email: sm2598@cornell.edu</div>
         </WrapperColumn>
       </WrapperTopSection>

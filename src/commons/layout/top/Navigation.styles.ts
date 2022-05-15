@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+export const WrapperRowLeft=styled.div`
+  display: flex;
+`
+
 export const WrapperRowBottom = styled.div`
   position: sticky;
   top: 0px;
@@ -7,8 +11,9 @@ export const WrapperRowBottom = styled.div`
   height: 64px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
   margin-bottom: -60px;
+  margin-right: 50px;
   z-index: 10;
   background: white;
   outline: none;
@@ -29,7 +34,7 @@ export const Button = styled.button`
     font-size: 20px;
   }
   z-index: 99;
-  max-width: 170px;
+  max-width: 100px;
   width: 100%;
   max-height: 64px;
   height: 100%;
@@ -79,4 +84,8 @@ export const ButtonWrite = styled.button`
 const WrapperColumn = styled.div`
   position: relative;
   display: flex;
+`;
+export const WrapperTotal = styled.div`
+  display: flex;
+  flex-direction: space-between;
 `;

@@ -5,7 +5,7 @@ const FooterUI = () => {
   return (
     <Wrapper>
       <WrapperColumn>
-        <div>© 2021 Sung Woo Min | Created with Love</div>
+        <div>© 2022 Sung Woo Min | Created with ❤︎</div>
       </WrapperColumn>
     </Wrapper>
   );

@@ -3,6 +3,7 @@ import {
   Button,
   ButtonBoard,
   ButtonWrite,
+  WrapperTotal,
   WrapperRowBottom,
 } from "./Navigation.styles";
 import { useContext, useRef } from "react";
@@ -12,18 +13,12 @@ const NavigationUI = () => {
   const executeScroll = () => myRef.current.scrollIntoView();
 
   return (
-    <WrapperRowBottom>
-      <div ref={myRef} />
-      <Button onClick={executeScroll}>Home</Button>
-      <div ref={myRef} />
-      <Button onClick={executeScroll}>About</Button>
-      <div ref={myRef} />
-      <Button onClick={executeScroll}>Skills</Button>
-      <div ref={myRef} />
-      <Button onClick={executeScroll}>Projects</Button>
-      <div ref={myRef} />
-      <Button onClick={executeScroll}>Contact</Button>
-    </WrapperRowBottom>
+      <WrapperRowBottom>
+        <div ref={myRef} />
+        <Button onClick={executeScroll}>Home</Button>
+        <div ref={myRef} />
+        <Button onClick={executeScroll}>About</Button>
+      </WrapperRowBottom>
   );
 };
 
